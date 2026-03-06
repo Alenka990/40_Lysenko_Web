@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачай Геншин — живи нормально</title>
+    <style>
+        body {
+            background-color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #eee;
+        }
+
+        h1 {
+            color: yellow;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        h2 {
+            color: yellow;
+            font-size: 1.3rem;
+            border-left: 5px solid yellow;
+            padding-left: 10px;
+            margin: 20px 0 15px 0;
+        }
+
+        p {
+            color: #ccc;
+            font-size: 1rem;
+        }
+
+        .header {
+            background: #333;
+            border-bottom: 3px solid yellow;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .footer {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 3px solid yellow;
+            margin-top: 20px;
+        }
+
+        .grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .side {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .side-item {
+            background: #333;
+            border: 2px solid yellow;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #ffd700;
+            flex: 1 1 130px;
+            border-radius: 20px;
+            box-shadow: 0 0 0 2px black;
+        }
+
+        .side-item small {
+            color: #aaa;
+            font-size: 0.7rem;
+            display: block;
+        }
+
+        .main {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 20px;
+            border: 2px solid yellow;
+        }
+
+        .reasons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .reasons li {
+            background: #333;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid yellow;
+            font-size: 1.1rem;
+        }
+
+        .reasons li span {
+            color: yellow;
+            font-weight: bold;
+            margin-right: 8px;
+            display: inline-block;
+            min-width: 25px;
+        }
+
+        .slogan-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .slogan {
+            background: #333;
+            border: 3px dashed yellow;
+            padding: 20px 10px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 30px 0 30px 0;
+        }
+
+        .slogan span {
+            font-size: 2rem;
+            display: block;
+        }
+
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .review-item {
+            background: #333;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid yellow;
+            font-style: italic;
+        }
+
+        .review-item .author {
+            color: yellow;
+            margin-top: 8px;
+            text-align: right;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @media (min-width: 480px) {
+            .slogan-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            h1 { font-size: 1.8rem; }
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 180px 1fr 180px;
+            }
+            .side {
+                flex-direction: column;
+            }
+            .side-item {
+                flex: none;
+                width: auto;
+            }
+            .slogan-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            h1 { font-size: 2rem; }
+        }
+
+        @media (min-width: 1024px) {
+            .slogan-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .sticky-bottom {
+            position: fixed;
+            bottom: 5px;
+            left: 5px;
+            background: yellow;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 3px solid black;
+            font-size: 1rem;
+        }
+
+        .sticky-right {
+            position: fixed;
+            top: 50%;
+            right: -20px;
+            background: red;
+            color: white;
+            padding: 10px 30px;
+            transform: rotate(90deg);
+            font-weight: bold;
+            border: 2px solid yellow;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🔥 ГЕНШИН ИМПАКТ — ЗАХОДИ, НЕ ПОЖАЛЕЕШЬ 🔥</h1>
+    <p style="margin:5px 0; color:yellow;">Уже 3 миллиарда скачиваний (нет)</p>
+</div>
+
+<div class="grid">
+
+    <div class="side">
+        <div class="side-item">
+            🎁 ПОДАРОК<br>5000 примогемов<br><small>после того как умрешь 100 раз</small>
+        </div>
+        <div class="side-item">
+            🚀 БЫСТРЫЙ СТАРТ<br>Сразу 5* персонаж<br><small>ну почти сразу (через полгода)</small>
+        </div>
+        <div class="side-item">
+            💊 ЧИТЫ<br>Бесконечная выносливость<br><small>работает 1 минуту</small>
+        </div>
+        <div class="side-item">
+            📞 ТЕХПОДДЕРЖКА<br>Круглосуточно<br><small>ответ через 30 дней</small>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <h2>⚡ ТОП-5 ПРИЧИН СКАЧАТЬ ГЕНШИН</h2>
+        <ul class="reasons">
+            <li><span>1</span> Абсолютно бесплатно — платить не надо, даже если очень хочется</li>
+            <li><span>2</span> Персонажи такие красивые, что мама спрашивает "это твоя девушка?"</li>
+            <li><span>3</span> Можно умереть от босса и начать сначала — веселье на неделю</li>
+            <li><span>4</span> Залипаешь на 5 минут, а проходит 5 часов — экономия времени</li>
+            <li><span>5</span> Там есть рыбалка. Просто рыбалка. Сиди и рыбачь</li>
+        </ul>
+
+        <h2>👄 ОТЗЫВЫ ТЕХ, КТО ВЫЖИЛ</h2>
+        <div class="review-list">
+            <div class="review-item">
+                "Скачал, потому что было скучно. Теперь скучно, но с Геншином. Спасибо"
+                <div class="author">— Колян, проиграл 300 часов</div>
+            </div>
+            <div class="review-item">
+                "Планировал покрутить баннер 1 раз. Продал почку. Всё норм"
+                <div class="author">— Артем, донатер</div>
+            </div>
+            <div class="review-item">
+                "Жена ушла, зато есть Гань Юй. Равноценный обмен"
+                <div class="author">— Олег, 35 лет</div>
+            </div>
+            <div class="review-item">
+                "Сначала бесило, что мало примогемов. Потом понял — это жизнь"
+                <div class="author">— Настя, играет 2 года</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="side">
+        <div class="side-item">
+            💳 ДОНАТ СО СКИДКОЙ<br>-90% на первый заход<br><small>потом +900%</small>
+        </div>
+        <div class="side-item">
+            🔑 ПРОДАМ АКК<br>5 легендарок<br><small>акк забанят через неделю</small>
+        </div>
+        <div class="side-item">
+            📱 РАБОТАЕТ<br>Даже на калькуляторе<br><small>1 кадр в минуту</small>
+        </div>
+        <div class="side-item">
+            🧙‍♂️ ГАЙД<br>Как выбить всех за час<br><small>не работает</small>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2025 Геншин — лучшая реклама в твоей жизни</p>
+    <p style="color:#aaa; font-size:0.8rem;">Не жди, качай прямо сейчас (нет)</p>
+</div>
+
+<div class="sticky-bottom">
+    ⚡ УСПЕЙ ЗАБРАТЬ 100500 КРУТОК ⚡
+</div>
+<div class="sticky-right">
+    👀 ТЫ ЕЩЁ ТУТ?
+</div>
+
+<div style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%); background: black; border: 6px solid yellow; padding: 15px; border-radius: 50px; color: yellow; font-weight: bold; font-size: 1.5rem; white-space: nowrap; box-shadow: 0 0 50px red;">
+    🚨 НЕ ПРОЛИСТАЙ 🚨
+</div>
+
+</body>
+</html>
