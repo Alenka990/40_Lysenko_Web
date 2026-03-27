@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1e2c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eef2ff;
+}
+
+header {
+    background: #0f121f;
+    border-bottom: 3px solid #3b82f6;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: #252b3d;
+    border: none;
+    padding: 8px 24px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background: #334155;
+}
+
+.tab.active {
+    background: #3b82f6;
+    color: white;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#content {
+    background: #0f121f;
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.loading {
+    text-align: center;
+    padding: 50px;
+    color: #94a3b8;
+}
+
+.error {
+    background: #2d1f1f;
+    border-left: 4px solid #ef4444;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fecaca;
+}
+
+.empty {
+    text-align: center;
+    padding: 50px;
+    color: #64748b;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post {
+    background: #1a1e2c;
+    border: 1px solid #2d3348;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.post:hover {
+    border-color: #3b82f6;
+}
+
+.post h3 {
+    color: #60a5fa;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.post p {
+    color: #cbd5e6;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.post-buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.post-buttons button {
+    background: #252b3d;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: #cbd5e1;
+}
+
+.post-buttons button:hover {
+    background: #334155;
+}
+
+.edit-btn {
+    background: #1e3a5f !important;
+    color: #60a5fa !important;
+}
+
+.delete-btn {
+    background: #5f1e1e !important;
+    color: #f87171 !important;
+}
+
+.form-box {
+    background: #1a1e2c;
+    border: 1px solid #2d3348;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    background: #0f121f;
+    border: 1px solid #2d3348;
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.form-buttons button {
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.submit {
+    background: #3b82f6;
+    color: white;
+}
+
+.cancel {
+    background: #2d3348;
+    color: #cbd5e1;
+}
+
+.refresh-btn {
+    background: #252b3d;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: #60a5fa;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.user-card {
+    background: #1a1e2c;
+    border: 1px solid #2d3348;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.user-card h4 {
+    color: #60a5fa;
+    margin-bottom: 8px;
+}
+
+.user-card p {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.facts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fact {
+    background: #1a1e2c;
+    border-left: 3px solid #3b82f6;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.fact p {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+.fact small {
+    color: #64748b;
+    font-size: 0.7rem;
+    display: block;
+    margin-top: 6px;
+}
+
+footer {
+    background: #0f121f;
+    border-top: 1px solid #2d3348;
+    padding: 15px;
+    margin-top: 30px;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.7rem;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .tab {
+        padding: 6px 18px;
+        font-size: 0.8rem;
+    }
+    main {
+        padding: 0 15px;
+    }
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+}
